@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Slides Generator</title>
+	<script src="./lib/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/phosphor-icons@1.4.1"></script>
+	<script src="./lib/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./lib/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <!-- Contains the visible content of Slides mode when Fullscreen mode is hidden -->
+    <div class="slides-mode">
+      <!-- The swiper div for slides -->
+      <div class="swiper-container">
+        <div class="add-slide-sign"><i class="ph-plus"></i></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="
+				background-image: url('https://source.unsplash.com/random/1600x800/?living,room,decor');" slide-name="Sample Living Room" floor-name="Details A" wall-name="Details A">
+          </div>
+          <div class="swiper-slide" style="
+				background-image: url('https://source.unsplash.com/random/1600x800/?bed,room,decor');" slide-name="Sample Bed Room" floor-name="Details B" wall-name="Details B">
+          </div>
+          <div class="swiper-slide" style="
+				background-image: url('https://source.unsplash.com/random/1600x800/?kitchen,room,decor');" slide-name="Sample Kitchen Room" floor-name="Details C" wall-name="Details C">
+          </div>
+        </div>
+      </div>
+      <!-- Wrap the bottom part and use a flexbox to vertically align it to the bottom -->
+      <div class="bottom-container">
+        <div class="room-info">
+          <p class="room-name">Sample Living Room</p>
+          <p class="room-details">Floor - Details A &nbsp;&nbsp;&nbsp;&nbsp; Wall - Details A</p>
+        </div>
+        <div class="bottom-buttons-container">
+		  <button class="btn1 btn-fullscreen"><i class="ph-frame-corners"></i>&nbsp; Fullscreen Current Slide</button>
+          <button class="btn1 duplicate-slide"><i class="ph-copy"></i>&nbsp; Duplicate Current Slide</button>
+        </div>
+      </div>
+    </div>
+    <!-- Include the content in the Fullscreen mode, which will overlay the Slides mode -->
+    <div class="fullscreen-mode" style="
+				background-image: url('https://source.unsplash.com/random/1600x800/?living,room,decor');">
+      <div class="top-menu-container">
+        <div class="top-menu">
+          <button class="btn1 exit-button"><i class="ph-sign-out"></i>&nbsp; Exit</button>
+        </div>
+      </div>
+    </div>
+	<!-- Used for displaying notification messages to the user -->
+    <div class="notify"></div>
+	<script src="./scripts/script.js"></script>
+  </body>
+
+</html>

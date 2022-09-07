@@ -1,0 +1,184 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global button type 1 styling */
+.btn1 {
+  border-radius: 0.7rem;
+  display: flex; /* Align icon and text on same line */
+  white-space: nowrap; /* Make sure the text stays in one line */
+  height: 2.5rem;
+  margin: 0.5rem;
+  padding: 0.7rem 0.7rem;
+  font-size: 1rem;
+  border-width: 0;
+  text-transform: uppercase; /* Use all CAPS */
+  color: white;
+  background-color: #26282c;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  transition-duration: 0.85s;
+  background-color: #d1d4de;
+  color: #26282c;
+}
+
+.btn1:active {
+  transition-duration: 0.05s;
+  transform: scale(1.1);
+}
+
+/* Container for all the content in Slides mode */
+.slides-mode {
+  display: flex;
+  flex-direction: column; /* Flex vertically */
+  justify-content: space-between;
+  position: absolute; /* Use absolute position to allow one div overlay another */
+  width: 100%;
+  height: 100%;
+  background-color: #464d52;
+  overflow: hidden; /* Make sure it can be overlayed properly by having a fixed size */
+}
+
+.slides-mode .swiper-container {
+  width: 100%;
+  height: 70%;
+  overflow: hidden; /* Hide extra slides beyond the page */
+  margin: 1rem 0;
+}
+
+/* Styling for all slides */
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 1rem;
+  filter: blur(4px); /* Blur on the background image */
+  cursor: pointer;
+}
+
+/* Styling the currently active slide to overwrite styling of all slides */
+.swiper-slide-active {
+  filter: blur(0);
+  cursor: grab;
+}
+
+/* Give it an intuitive hand grabbing cursor change */
+.swiper-slide-active:active {
+  cursor: grabbing;
+}
+
+.slides-mode .swiper-container .add-slide-sign {
+  /* Center vertically */
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  
+  right: 1%; /* Align to the right */
+  color: #abb2ba;
+  font-size: 5vw; /* Dynamically size using viewport width */
+  cursor: pointer;
+}
+
+.slides-mode .swiper-container .add-slide-sign:hover {
+  transition-duration: 0.1s;
+  text-shadow: 0 0 1vw white;
+}
+
+.slides-mode .swiper-container .add-slide-sign:active {
+  transition-duration: 0.05s;
+  text-shadow: 0 0 2vw white;
+}
+
+/* Bottom container for the slides mode page */
+.slides-mode .bottom-container {
+  display: flex;
+  justify-content: space-between; /* Align 2 elements on 2 sides */
+  margin: auto 0; /* Center vertically */
+}
+
+.slides-mode .bottom-container .room-info {
+  font-size: 1.2rem;
+
+  /* Keep texts in one line */
+  white-space: nowrap;
+  overflow: hidden;
+  
+  margin-left: 5%;
+  color: white;
+}
+
+.slides-mode .bottom-container .room-info .room-name {
+  text-transform: uppercase; /* Use all CAPS */
+  font-weight: bold;
+}
+
+.slides-mode .bottom-container .room-info .room-details {
+  margin-top: 0.7rem;
+}
+
+.slides-mode .bottom-container .bottom-buttons-container {
+  display: inline-flex; /* Keep in one line */
+  margin-right: 5%;
+}
+
+.fullscreen-mode {
+  display: none; /* Hidden by default, will be dynamically displayed */
+
+  position: absolute; /* Use absolute position to allow one div overlay another */
+  z-index: 1; /* Set overlay order (to be on top) */
+  height: 100%;
+  width: 100%;
+  
+  /* Style the fullscreen background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Top menu for fullscreen mode */
+.top-menu-container {
+  /* To help align its child element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-menu-container .top-menu {
+  display: inline-flex;
+  background-color: #393e43;
+  padding: 0.2rem;
+  border-radius: 0 0 0.7rem 0.7rem;
+  opacity: 0.97;
+}
+
+.notify {
+  display: none;
+  position: absolute; /* Use absolute position to allow one div overlay another */
+  z-index: 2; /* Set overlay order (to be on top) */
+
+  /* Center vertically and horizontally */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 3vw;
+  text-shadow: 0 0 1vw black;
+
+  /* Keep texts in one line */
+  white-space: nowrap;
+  overflow: hidden;
+}
