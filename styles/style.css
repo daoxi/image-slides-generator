@@ -85,7 +85,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  
+
   right: 1%; /* Align to the right */
   color: #abb2ba;
   font-size: 5vw; /* Dynamically size using viewport width */
@@ -115,7 +115,7 @@ body {
   /* Keep texts in one line */
   white-space: nowrap;
   overflow: hidden;
-  
+
   margin-left: 5%;
   color: white;
 }
@@ -141,7 +141,7 @@ body {
   z-index: 1; /* Set overlay order (to be on top) */
   height: 100%;
   width: 100%;
-  
+
   /* Style the fullscreen background image */
   background-repeat: no-repeat;
   background-size: cover;
