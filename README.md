@@ -1,0 +1,1 @@
+Generates random room images (with certain keywords) using the [Unsplash](https://unsplash.com/) API, to create image slides for various user interactions.
