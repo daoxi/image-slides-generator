@@ -36,7 +36,7 @@ body {
 
 .btn1:active {
   transition-duration: 0.05s;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Container for all the content in Slides mode */
