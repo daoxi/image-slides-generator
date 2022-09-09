@@ -118,6 +118,7 @@ $(".remove-slide").on("click", function () {
   // Use the real index (considering duplicated slides in loop mode) of currently active slide for removal
   swiper.removeSlide(swiper.realIndex);
   toNotify("Current slide removed");
+  updateRoomInfo();
   checkIfLastSlide();
 });
 
