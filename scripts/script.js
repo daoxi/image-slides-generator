@@ -108,6 +108,14 @@ $(".duplicate-slide").on("click", function () {
   checkIfLastSlide();
 });
 
+// Remove the currently active slide.
+$(".remove-slide").on("click", function () {
+  // Use the real index (considering duplicated slides in loop mode) of currently active slide for removal
+  swiper.removeSlide(swiper.realIndex);
+  toNotify("Current slide removed");
+  checkIfLastSlide();
+});
+
 // Display a sample message for testing buttons.
 $(".btn-dummy").on("click", function () {
   toNotify("(This is a sample message)");
