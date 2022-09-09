@@ -23,7 +23,6 @@ body {
   padding: 0.7rem 0.7rem;
   font-size: 1rem;
   border-width: 0;
-  text-transform: uppercase; /* Use all CAPS */
   color: white;
   background-color: #26282c;
   cursor: pointer;
@@ -121,7 +120,6 @@ body {
 }
 
 .slides-mode .bottom-container .room-info .room-name {
-  text-transform: uppercase; /* Use all CAPS */
   font-weight: bold;
 }
 
