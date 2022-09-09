@@ -80,12 +80,13 @@ body {
 }
 
 .slides-mode .swiper-container .add-slide-sign {
-  /* Center vertically */
+  /* Vertically center (closer to top) */
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 40%;
+  transform: translate(0, -40%);
 
   right: 1%; /* Align to the right */
+
   color: #abb2ba;
   font-size: 5vw; /* Dynamically size using viewport width */
   cursor: pointer;
