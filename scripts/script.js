@@ -4,6 +4,11 @@ const swiper = new Swiper(".swiper-container", {
   spaceBetween: 25,
   centeredSlides: true,
   slideToClickedSlide: true, // Clicking on any slide will produce transition to this slide.
+  // Enable navigating by keyboard arrow keys
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
 });
 
 // Global variable for numbering new slides.
